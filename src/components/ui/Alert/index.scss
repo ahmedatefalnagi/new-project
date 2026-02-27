@@ -1,0 +1,57 @@
+// ** Error
+$borderColor: #eb1010;
+$errorBg: #440f0f;
+$errorColor: #ef8d8dfa;
+
+$dfBorder: #188fb3;
+$dfBg: #0f3844;
+$dfColor: #8dd8effa;
+
+$infoBorder: #7ebd18;
+$infoBg: #354b11;
+$infoColor: #8dd8effa;
+
+@mixin alert($name, $border, $bg, $color) {
+    .#{$name} {
+        border: 2px dotted $border;
+        border-radius: 0.8rem;
+        padding: 1.3rem;
+        background-color: $bg;
+        color: $color;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+
+        .alert-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+                .title {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.2rem;
+                }
+
+                span svg{
+                    margin-right: 0.6rem;
+                }
+
+                .close {
+                    cursor: pointer;
+                }
+            }
+
+            p {
+                font-size: 0.9rem;
+                font-weight: 500;
+                line-height: 1.5rem;
+                margin-top: 1.2rem;
+            }
+    }
+}
+
+@include alert("alert-danger", $borderColor, $errorBg, $errorColor);
+
+@include alert("alert-default", $dfBorder, $dfBg, $dfColor);
+
+@include alert("alert-info", $infoBorder, $infoBg, $infoColor);

@@ -1,0 +1,19 @@
+Create Snippet
+{
+  "ReactJS + TS Component.": {
+    "prefix": "rtsc",
+    "body": [
+      "interface IProps {\r$1",
+      "}\r",
+      "\r",
+      "const ${TM_FILENAME_BASE} = ({$2}: IProps) => {\r",
+      "  return (\r",
+      "    <div>$3</div>\r",
+      "  )\r",
+      "}\r",
+      "\r",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "ReactJS + TS Component."
+  }
+}
